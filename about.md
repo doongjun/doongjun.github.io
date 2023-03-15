@@ -8,7 +8,7 @@ permalink: /about/
 
 ### More Information
 
-:octocat: [github](https://github.com/doongjun)
+[github](https://github.com/doongjun)
 
 ### Contact me
 
