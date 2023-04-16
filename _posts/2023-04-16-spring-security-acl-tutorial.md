@@ -99,7 +99,7 @@ insert into acl_class(id, class) values(1, 'com.tutorial.acl.domain.Board');
 ```sql
 insert into acl_sid(id, sid, principal) values(1, 'userA', true);
 insert into acl_sid(id, sid, principal) values(1, 'userB', true);
-insert into acl_sid(id, sid, principal) values(1, 'ROLE_EDITOR', true);
+insert into acl_sid(id, sid, principal) values(1, 'ROLE_EDITOR', false);
 ```
 
 |id|sid|principal|
