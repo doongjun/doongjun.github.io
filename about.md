@@ -12,4 +12,4 @@ permalink: /about/
 
 ### Contact me
 
-[doongjun@kakao.com](mailto:doongjun@kakao.com)
+[doongjun.kim@gmail.com](mailto:doongjun.kim@gmail.com)
