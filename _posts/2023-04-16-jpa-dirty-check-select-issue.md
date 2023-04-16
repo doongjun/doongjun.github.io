@@ -34,7 +34,7 @@ fun findDestinationById(id: Long): DestinationDto? =
         destinationRepository.findById(id).orElse(null)?.let { DestinationDto(it) }
 ```
 여행 목적지를 검색하는 메서드를 실행했을 때 로그를 확인해보니 아래와 같았다.  
-![Alt text](../../../../../assets/post_images/post_image_1.png)  
+![Alt text](/assets/post_images/post_image_1.png)  
 JPA의 변경감지가 발생할만한 코드는 없고, update 쿼리가 나가는 것은 Dirty Checking이 발생된 것이다.
 이를 해결할 수 있는 방법은 두 가지가 있다.
 
@@ -58,7 +58,7 @@ fun findDestinationById(id: Long): DestinationDto? =
 
 트랜잭션 범위에서 Entity를 조회할 경우 조회시점의 Entity 스냅샷을 만들어두고,  
 flush()가 호출되었을 때, 스냅샷과 비교하여 다른 점이 있으면 update 쿼리를 발생시킨다.
-![Alt text](../../../../../assets/post_images/post_image_2.png)  
+![Alt text](/assets/post_images/post_image_2.png)  
 여기서, **엔티티와 스냅샷을 비교하기 위해서는 equals()로 판단하지 않고 각 컬럼들이 같은지 비교를 한다. (엔티티 - 스냅샷)**  
 그리고 **각 컬럼들의 비교는 해당 객체의 equals()로 판단한다. (엔티티의 컬럼 - 스냅샷의 컬럼)**
 

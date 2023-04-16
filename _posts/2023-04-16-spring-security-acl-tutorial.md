@@ -29,7 +29,7 @@ ex) 공지사항
 *(Dependency, ACL 관계 설정은 아래 링크 참고)*
 
 ACL을 사용하기 위해서 4개의 테이블이 필요하다.  
-![Alt text](../../../../../assets/post_images/post_image_3.png)  
+![Alt text](/assets/post_images/post_image_3.png)  
 
 **acl_class**
 ```
@@ -162,7 +162,7 @@ fun `userA_게시판_전체조회`() {
 }
 ```
 테스트가 잘 동작할까?  
-![Alt text](../../../../../assets/post_images/post_image_4.png)  
+![Alt text](/assets/post_images/post_image_4.png)  
 
 이 테스트는 실패한다.  
 userA가 findAll() 함수로 조회해온 결과의 개수를 1개로 예상했지만 2개가 조회되어 실패했다.  
@@ -179,7 +179,7 @@ interface BoardRepository: JpaRepository<Board, Long> {
 ```
 위와 같이 @PostFilter 애노테이션을 작성하면 테스트가 정상적으로 통과하는 것을 볼 수 있다.
 
-![Alt text](../../../../../assets/post_images/post_image_5.png)  
+![Alt text](/assets/post_images/post_image_5.png)  
 위와 같은 flow로 Spring Security ACL이 동작한다.  
 읽기 권한 뿐만 아니라 쓰기, 다운로드 등 다양한 기본 권한들이 있고 개발자가 커스텀하여 사용할 수 있다.
 
